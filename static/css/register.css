@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+.register-container {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.register-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 400px;
+}
+
+.register-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: slideDown 1s ease-in-out;
+}
+
+.messages {
+    margin-bottom: 15px;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.messages li {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.messages .success {
+    background-color: rgba(76, 175, 80, 0.9);
+    color: #fff;
+}
+
+.messages .danger {
+    background-color: rgba(244, 67, 54, 0.9);
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    background: #6a11cb;
+    border-radius: 25px;
+    transition: background 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #2575fc;
+}
+
+.login-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.login-link a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+.login-link a:hover {
+    color: #c8e1ff;
+}
+
+/* Password Hint Popup */
+.password-hints {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.password-hints p {
+    margin: 5px 0;
+}
+
+.password-hints .invalid {
+    color: #f44336; /* Red */
+}
+
+.password-hints .valid {
+    color: #4caf50; /* Green */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

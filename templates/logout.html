@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged Out</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/logout.css') }}">
+</head>
+<body>
+    <div class="logout-container">
+        <div class="logout-box">
+            <h1>You Have Logged Out</h1>
+            <p>Thank you for visiting. We hope to see you again soon!</p>
+            <a href="{{ url_for('app.index') }}" class="btn">Go to Homepage</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/logout.js') }}"></script>
+</body>
+</html>

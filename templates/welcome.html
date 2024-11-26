@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/welcome.css') }}">
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="welcome-box">
+            <h1>Welcome, {{ username }}!</h1>
+            <p>We're glad to have you here.</p>
+            <p>This is the Web Authentication Project using Python as the backend. 
+                Your password is safe and will not be saved in plaintext in the code or the backend. 
+                It is automatically encrypted using my personal secret key.</p>
+            <a href="{{ url_for('app.logout') }}" class="btn">Logout</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/welcome.js') }}"></script>
+</body>
+</html>

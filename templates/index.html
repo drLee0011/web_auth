@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="index-container">
+        <div class="welcome-box">
+            <h1>Welcome{% if current_user %}, {{ current_user }}!{% endif %}</h1>
+
+            <div class="actions">
+                {% if current_user %}
+                    <!-- Show Logout if the user is logged in -->
+                    <a href="/logout" class="btn">Logout</a>
+                {% else %}
+                    <!-- Show Login and Register if the user is not logged in -->
+                    <a href="/login" class="btn">Login</a>
+                    <a href="/register" class="btn">Register</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
